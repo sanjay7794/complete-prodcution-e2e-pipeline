@@ -18,5 +18,15 @@ pipeline{
                git branch: 'main', url:'https://github.com/sanjay7794/complete-prodcution-e2e-pipeline.git'
             }
         }
+        stage("build application"){
+            steps{
+               sh "mvn clean packaeg"
+            }
+        }
+        stage("Test application"){
+            steps{
+               sh "mvn test"
+            }
+        }
     }
 }
