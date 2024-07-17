@@ -20,7 +20,7 @@ pipeline{
         }
         stage("build application"){
             steps{
-               sh "mvn clean packaeg"
+               sh "mvn clean package"
             }
         }
         stage("Test application"){
