@@ -1,7 +1,7 @@
 FROM maven as build 
 WORKDIR /app
 COPY . .
-RUN mvn clean build
+RUN mvn clean install
 
 FROM eclipse-temurin
 WORKDIR /app
